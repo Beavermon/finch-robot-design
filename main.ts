@@ -1,13 +1,20 @@
-function isosceles () {
-    finch.setMove(MoveDir.Forward, 10, 100)
+function isosceles (leg: number) {
+    leg2 = leg ** 2
+    leg__leg = leg2 + leg2
+    square_root = Math.sqrt(leg ** 2 + leg ** 2)
+    finch.setMove(MoveDir.Forward, leg, 100)
     finch.setTurn(RLDir.Right, 90, 100)
-    finch.setMove(MoveDir.Forward, 10, 100)
+    finch.setMove(MoveDir.Forward, leg, 100)
     finch.setTurn(RLDir.Right, 135, 100)
-    finch.setMove(MoveDir.Forward, 14.142, 500)
-    finch.setTurn(RLDir.Right, 135, 500)
-    music.play(music.stringPlayable("B A G A G F A C5 ", 120), music.PlaybackMode.UntilDone)
+    finch.setMove(MoveDir.Forward, square_root, 100)
+    finch.setTurn(RLDir.Right, 135, 100)
+    basic.showIcon(IconNames.Yes)
+    music.play(music.stringPlayable("C5 G B A F A C5 B ", 120), music.PlaybackMode.UntilDone)
 }
 input.onLogoEvent(TouchButtonEvent.Pressed, function () {
-    isosceles()
+    isosceles(5)
 })
+let square_root = 0
+let leg__leg = 0
+let leg2 = 0
 finch.startFinch()
