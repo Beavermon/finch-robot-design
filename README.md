@@ -1,5 +1,4 @@
-
-> Open this page at [https://beavermon.github.io/isosceles/](https://beavermon.github.io/isosceles/)
+# school project thingy 
 
 ## Use as Extension
 
